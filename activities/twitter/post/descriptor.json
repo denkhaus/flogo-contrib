@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "title": "Twitter Post Activity",
   "description": "Twitter Post Activity",
-  "homepage": "https://github.com/denkhaus/flogo/activities/twitter/post",
+  "homepage": "https://github.com/denkhaus/flogo-contrib/activities/twitter/post",
   "settings": [
     {
       "name": "consumerKey",
