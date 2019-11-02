@@ -1,0 +1,47 @@
+{
+  "name": "twitter-post-activity",
+  "type": "flogo:activity",
+  "version": "0.0.1",
+  "title": "Twitter Post Activity",
+  "description": "Twitter Post Activity",
+  "homepage": "https://github.com/denkhaus/flogo/activities/twitter/post",
+  "settings": [
+    {
+      "name": "consumerKey",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "consumerSecret",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "accessToken",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "accessTokenSecret",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "input": [
+    {
+      "name": "content",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "name": "statusCode",
+      "type": "string"
+    },
+    {
+      "name": "message",
+      "type": "any"
+    }
+  ]
+}
