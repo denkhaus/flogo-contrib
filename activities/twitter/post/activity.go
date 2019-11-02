@@ -3,7 +3,7 @@ package sample
 import (
 	"strings"
 
-	"github.com/denkhaus/flogo/activities/twitter"
+	"github.com/denkhaus/flogo-contrib/activities/twitter"
 	"github.com/juju/errors"
 	"github.com/project-flogo/core/activity"
 	"github.com/project-flogo/core/data/metadata"
