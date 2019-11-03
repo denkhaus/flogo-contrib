@@ -1,9 +1,7 @@
 package sample
 
 import (
-	"io/ioutil"
 	"os"
-	"path/filepath"
 
 	"github.com/containous/yaegi/interp"
 	"github.com/containous/yaegi/stdlib"
@@ -74,26 +72,39 @@ func (p *Activity) Eval(ctx activity.Context) (bool, error) {
 		return false, errors.New("sourceType is undefined")
 	}
 
-	var sourceCode string
-	switch input.SourceType {
-	case "CODE":
-		sourceCode = input.Source
-	case "PATH":
-		if !filepath.IsAbs(input.Source) {
-			srcPath, err := filepath.Abs(input.Source)
-			if err != nil {
-				return false, errors.Annotate(err, "Abs [input source]")
-			}
+	// var sourceCode string
+	// switch input.SourceType {
+	// case "CODE":
+	// 	sourceCode = input.Source
+	// case "PATH":
+	// 	if !filepath.IsAbs(input.Source) {
+	// 		srcPath, err := filepath.Abs(input.Source)
+	// 		if err != nil {
+	// 			return false, errors.Annotate(err, "Abs [input source]")
+	// 		}
 
-			src, err := ioutil.ReadFile(srcPath)
-			if err != nil {
-				return false, errors.Annotate(err, "ReadFile [source path]")
-			}
+	// 		src, err := ioutil.ReadFile(srcPath)
+	// 		if err != nil {
+	// 			return false, errors.Annotate(err, "ReadFile [source path]")
+	// 		}
 
-			sourceCode = string(src)
-		}
+	// 		sourceCode = string(src)
+	// 	}
+	// }
 
-	}
+	var sourceCode = `
+			package "runner"
+
+			import(
+				"errors
+			)
+			
+			
+			func Entrypoint(args interface{})(interface{}, error){
+				params:= args.(map[string]interface{})
+				return params["string"], nil
+			}		
+		`
 
 	ctx.Logger().Debug("Generate interpreter context")
 	_, err := p.Interpreter.Eval(sourceCode)
