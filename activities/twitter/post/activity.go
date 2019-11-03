@@ -56,11 +56,11 @@ func (p *Activity) Metadata() *activity.Metadata {
 func (p *Activity) Eval(ctx activity.Context) (done bool, err error) {
 	var input Input
 	if err = ctx.GetInputObject(&input); err != nil {
-		return true, errors.Annotate(err, "GetInputObject")
+		return false, errors.Annotate(err, "GetInputObject")
 	}
 
 	if input.Content == "" {
-		return true, errors.New("content is empty")
+		return false, errors.New("content is empty")
 	}
 
 	ctx.Logger().Debug("post tweet")
@@ -78,7 +78,7 @@ func (p *Activity) Eval(ctx activity.Context) (done bool, err error) {
 	}
 
 	if err := ctx.SetOutputObject(&output); err != nil {
-		return true, errors.Annotate(err, "SetOutputObject")
+		return false, errors.Annotate(err, "SetOutputObject")
 	}
 
 	return true, nil

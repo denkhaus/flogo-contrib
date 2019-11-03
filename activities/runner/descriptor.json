@@ -1,0 +1,48 @@
+{
+  "name": "golang-runner-activity",
+  "type": "flogo:activity",
+  "version": "0.0.1",
+  "title": "Golang Runner",
+  "description": "Run Go-Code activity",
+  "homepage": "https://github.com/denkhaus/flogo-contrib/activities/runner",
+  "ref": "https://github.com/denkhaus/flogo-contrib/activities/runner",
+  "author": "denkhaus",
+  "settings": [
+    {
+      "name": "goPath",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "input": [
+    {
+      "name": "source",
+      "type": "string",
+      "required": true,
+      "description": "The source to interpret"
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": true,
+      "allowed": ["CODE", "PATH"],
+      "description": "The source type (ie. CODE or PATH)"
+    },
+    {
+      "name": "args",
+      "type": "any",
+      "required": false,      
+      "description": "The input arguments"
+    }
+  ],
+  "output": [
+    {
+      "name": "result",
+      "type": "any"
+    },
+    {
+      "name": "error",
+      "type": "string"
+    }
+  ]
+}
