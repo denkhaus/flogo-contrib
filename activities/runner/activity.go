@@ -93,10 +93,10 @@ func (p *Activity) Eval(ctx activity.Context) (bool, error) {
 	// }
 
 	var sourceCode = `
-			package "runner"
+			package runner
 
 			import(
-				"errors
+				"errors"
 			)
 			
 			
