@@ -1,0 +1,37 @@
+{
+  "name": "telegram-post-activity",
+  "type": "flogo:activity",
+  "version": "0.0.1",
+  "title": "Telegram Post",
+  "description": "Telegram Post Activity",
+  "homepage": "https://github.com/denkhaus/flogo-contrib/activities/telegram/post",
+  "settings": [
+    {
+      "name": "apiKey",
+      "type": "string",
+      "required": true
+    }    
+  ],
+  "input": [
+    {
+      "name": "content",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "chatId",
+      "type": "int",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "name": "statusCode",
+      "type": "string"
+    },
+    {
+      "name": "message",
+      "type": "any"
+    }
+  ]
+}

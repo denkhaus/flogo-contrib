@@ -2,7 +2,7 @@
   "name": "twitter-post-activity",
   "type": "flogo:activity",
   "version": "0.0.1",
-  "title": "Twitter Post Activity",
+  "title": "Twitter Post",
   "description": "Twitter Post Activity",
   "homepage": "https://github.com/denkhaus/flogo-contrib/activities/twitter/post",
   "settings": [
@@ -37,11 +37,11 @@
   "output": [
     {
       "name": "statusCode",
-      "type": "string"
+      "type": "int"
     },
     {
       "name": "message",
-      "type": "any"
+      "type": "string"
     }
   ]
 }
