@@ -5,6 +5,8 @@
   "title": "Twitter Post",
   "description": "Twitter Post Activity",
   "homepage": "https://github.com/denkhaus/flogo-contrib/activities/twitter/post",
+  "ref": "https://github.com/denkhaus/flogo-contrib/activities/twitter/post",
+  "author": "denkhaus",
   "settings": [
     {
       "name": "consumerKey",

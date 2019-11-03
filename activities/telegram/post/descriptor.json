@@ -5,12 +5,14 @@
   "title": "Telegram Post",
   "description": "Telegram Post Activity",
   "homepage": "https://github.com/denkhaus/flogo-contrib/activities/telegram/post",
+  "ref": "https://github.com/denkhaus/flogo-contrib/activities/telegram/post",
+  "author": "denkhaus",
   "settings": [
     {
       "name": "apiKey",
       "type": "string",
       "required": true
-    }    
+    }
   ],
   "input": [
     {
@@ -27,11 +29,11 @@
   "output": [
     {
       "name": "statusCode",
-      "type": "string"
+      "type": "int"
     },
     {
       "name": "message",
-      "type": "any"
+      "type": "string"
     }
   ]
 }
