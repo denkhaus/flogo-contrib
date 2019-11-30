@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "title": "Golang Runner",
   "description": "Run Go-Code activity",
-  "homepage": "https://github.com/denkhaus/flogo-contrib/activities/runner",
-  "ref": "https://github.com/denkhaus/flogo-contrib/activities/runner",
+  "homepage": "https://github.com/denkhaus/flogo-contrib/incubator/activities/runner",
+  "ref": "https://github.com/denkhaus/flogo-contrib/incubator/activities/runner",
   "author": "denkhaus",
   "settings": [
     {
